@@ -1,0 +1,128 @@
+package inhertance;
+import java.util.Scanner;
+
+//--------------------------------------------
+
+class ShapeTest{
+	protected double area;
+	protected Scanner scan = new Scanner(System.in);
+	public ShapeTest() {
+		System.out.println("ShapeTest 기본 생성자");
+	}
+	public void calcArea() {
+		System.out.println("도형을 계산합니다");
+	}
+	public void dispArea() {
+		System.out.println("도형을 출력합니다");
+	}
+}
+
+//---------------------------------------------------------------------
+class SamTest extends ShapeTest{
+	protected int base, height;
+	public SamTest() {
+		System.out.println("SamTest 기본 생성자");
+		System.out.println("밑변 : ");
+		base = scan.nextInt();
+		System.out.println("높이 : ");
+		height = scan.nextInt();
+		
+	}
+	@Override
+	public void calcArea() {
+		area =base*height/2.0;
+	}
+	@Override
+	public void dispArea() {
+		System.out.println("삼각형의 넓이 = "+area);
+	}
+}
+
+//---------------------------------------------------------------------
+class SaTest extends ShapeTest{
+	protected int width,height;
+	public SaTest() {
+		System.out.println("SaTest 기본 생성자");
+		System.out.println("가로 : ");
+		width =scan.nextInt();
+		System.out.println("높이 : ");
+		height =scan.nextInt();
+		
+	}
+	public void calcArea() {
+		area = width * height;
+		
+	}
+	
+	public void dispArea() {
+		System.out.println("사각형의 넓이 = "+ area);
+	}
+	
+}
+//----------------------------------------------------------------------
+class SadariTest extends ShapeTest{
+	protected int top ,bottom ,height;
+	public SadariTest() {
+	System.out.println("SadariTest 기본 생성자");
+	System.out.println("윗변 : ");
+	top = scan.nextInt();
+	System.out.println("밑변 : ");
+	bottom = scan.nextInt();
+	System.out.println("높이 : ");
+	height =scan.nextInt();
+	
+	}
+	public void calcArea() {
+		area = (top+bottom)*height/2.0; //소수점 자리 나오게 나누는 2 를 2.0! 
+	}
+	public void dispArea() {
+		System.out.println("사다리꼴의 넓이 = "+ area);}
+	
+}
+//----------------------------------------------------------------------
+
+public class ShapeMain {
+
+	public static void main(String[] args) {
+//
+//		SamTest sam = new SamTest(); // 1:1관계 Samtest 뿐만 아니라 부모인 shapeTest도 가져옴
+//		sam.calcArea();
+//		sam.dispArea();
+//		System.out.println();
+//		SaTest sa = new SaTest();
+//		sa.calcArea();
+//		sa.dispArea();
+//		System.out.println();
+//		SadariTest sadari = new SadariTest();
+//		sadari.calcArea();
+//		sadari.dispArea();
+//		System.out.println();
+		
+		//결합도 낮추기 - 만능 리모컨 //부모 = 자식 , 다형성 
+		//부모는 모든 자식 클래스를 참조 할 수 있다
+		//부모 = 자식
+		//자식 클래스는 부모 클래스 참조 할 수 없다. 부모와 자식이 싸우면 자식이 이김 ->자식클래스가 부모 클래스 참조 하기 위해서는  자식 =(자식)부모 => down cast(아랫쪽에 맞춰준다... 자식캐스트를 걸어서 부모가 자식으로 맞춰가는것.. 해줘야 한다!!
+		ShapeTest shape =null; //ShapeTest shape= new ShapeTest(); -> 이거 하지 말라...객체( 클래스를 )잡는 것이 아니라 단순 만능 리모콘만 가져온다는 것임??
+		shape = new SamTest(); // 
+		shape.calcArea();
+		shape.dispArea();
+		System.out.println();
+		shape = new SaTest();
+		shape.calcArea();
+		shape.dispArea();
+		System.out.println();
+		shape = new SadariTest();
+		shape.calcArea();
+		shape.dispArea();
+		System.out.println();
+		
+	//상속을 쓰려는 이유 : 다형성 떄문에!!! 
+		//S.O.LID
+
+
+	}
+
+}
+
+
+

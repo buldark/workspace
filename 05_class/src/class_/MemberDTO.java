@@ -1,0 +1,64 @@
+package class_;//일인분씩 잡는다....
+import java.util.Scanner;
+public class MemberDTO/*or  MemberVO : 데이터를 보관하는 클래스 */ {
+	private String name;
+	private int age;
+	private String  phone , address ;
+	
+	
+	public MemberDTO(String name,int age,String  phone, String address) {
+		Scanner scan = new Scanner(System.in);
+		this.name = name;
+		this.age = age;
+		this.phone = phone;
+		this.address = address;}//생성자 
+		//		System.out.println("이름 입력 :");
+//		name = scan.next();
+//		
+//		System.out.println("나이 입력 :");
+//		age = scan.nextInt();
+//		
+//		System.out.println("핸드폰 입력 :");
+//		phone = scan.next();
+//		
+//		System.out.println("주소 입력 :");
+//		address = scan.next();
+		
+	
+	
+	
+	public String getName() {
+		return name;
+		
+	}
+	public int getAge() {
+		return age;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public String getAddress() {
+		return address;
+	}
+	
+	public void setName(String name) {
+		
+		this.name = name;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return name+"\t"+age+"\t"+phone+"\t"+address;//이렇게 바꾸면 간단하게 이것만 찍어라 그래도 이렇게 나옴!! 
+	}
+}
+

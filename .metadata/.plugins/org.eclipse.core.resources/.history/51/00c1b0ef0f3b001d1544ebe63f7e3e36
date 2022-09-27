@@ -1,0 +1,42 @@
+package constructor;
+
+public class VarArgs {
+		
+		public  VarArgs() {
+			System.out.println("기본생성자");
+		}
+		public int sum(int a ,int b) {
+			return a+b;
+		}
+		
+	
+	public static void main(String[] args) {
+		VarArgs va = new VarArgs(); // 클래스안에 생성자가 아예 없을 경우에만 기본생성자 // 클래스안에 생성자가 있으면 직접 생성자를 만들어야 함 
+		
+		
+		System.out.println("합"+va.sum(10,20));
+	//	System.out.println("합"+va.sum(10,20,30));
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	private String sum(int i, int j) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	private String sum(int i, int j, int k) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

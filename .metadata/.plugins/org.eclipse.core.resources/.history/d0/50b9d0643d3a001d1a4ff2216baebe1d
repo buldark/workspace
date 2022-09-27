@@ -1,0 +1,25 @@
+package class_;
+
+
+class Person{
+	
+	
+	
+	
+}//c-person
+
+
+
+
+
+
+//---------------------------------------------
+public class PersonMain {
+//객체지향언어 쓰는 이유 1)중복 되는것을 피하기 위해서 cf) DB - aap 관점 지향
+				// 2)결합성을 낮추기 위해서 
+	public static void main(String[] args) {
+		
+
+	}
+
+}

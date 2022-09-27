@@ -1,0 +1,18 @@
+package constructor;
+import java.util.Scanner;
+public class Exam {
+	
+	private String name;
+	private String dap;
+	private char[] ox;
+	private int score;
+	private final String JUNG="11111";
+	public Exam() {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("이르을 입력하시오");
+		String name = scan.next();
+		System.out.println("답을 입력하시오");
+		String dap = scan.next();
+	}
+	
+}

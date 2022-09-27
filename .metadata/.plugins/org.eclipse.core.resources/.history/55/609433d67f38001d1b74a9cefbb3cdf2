@@ -1,0 +1,17 @@
+package while_;
+
+public class DoWhile {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//A B C D E-Z
+		char ch = 'A';
+		do {
+			ch++;
+			System.out.println(ch);
+		}while(ch == 'z');
+		
+
+	}
+
+}

@@ -1,0 +1,79 @@
+package multi;
+
+public class MultiArray_03 {
+
+	public static void main(String[] args) {
+		String[] name = {"홍길동","프로도","조르디"};
+		int[][] jumsu = {{90,95,100,0},{100,89,75,0},{90,95,100,0}};
+		double[] avg = new double[3];
+		char[] grade = new char [3];
+		
+		for(int i = 0 ; i < jumsu.length; i++ ) {
+			for(int j = 0; j<jumsu[i].length-1/*-1빼는 이유는 총점까지 안가기 위해서  */;j++) {
+				jumsu[i][3]+= jumsu[i][j];//총점
+				
+			
+			}//for j
+			//평균 - j가 필요없으니깐 j 나가서....
+			avg[i]=jumsu[i][3]/3.0;//실수형이니깐 .0을 붙여서 나눠 줘야 함....
+			//학점 - 학점도 j 가 필요 없으니 for j 밖에서
+			if(avg[i]>=90) {
+				grade[i] = 'A';
+			} else if(avg[i]>=80) {
+				grade[i] = 'B';
+			}else if(avg[i]>=70) {
+				grade[i] = 'C';
+			} else if(avg[i]>=60) {
+				grade[i] = 'D';
+			} else grade[i] ='F'; 
+			
+			
+		}//for i 
+		
+		//출력
+//		name[0]  jumsu[][]     avg[0]	grade[0]
+//				 jumsu[][]
+//				 jumsu[][]
+//				 jumsu[][]							
+//		
+//		name[1]	 jumsu[][]     avg[0]	grade[1]
+//				 jumsu[][]
+//				 jumsu[][]
+//				 jumsu[][]	
+//						 
+//		name[2]   jumsu[][]     avg[0]	grade[2]
+//				 jumsu[][]
+//				 jumsu[][]
+//				 jumsu[][]	
+		
+		for(int i = 0 ; i < jumsu.length; i++ ) {
+			System.out.print(name[i]+" ");
+			int count = 0;
+			count++;
+		
+			for(int j = 0; j<jumsu[i].length;j++) {
+				//System.out.print(name[i]);
+				System.out.print(jumsu[i][j]+" " );
+				int count =0;
+				
+			}
+			System.out.print(avg[i]+" ");
+			System.out.print(grade[i]+" ");
+			System.out.println(count%7==0);
+		}
+						
+	
+	}
+
+}
+
+ /*
+----------------------------------------------------
+이름      국어      영어      수학      총점      평균      학점
+----------------------------------------------------
+홍길동   90      95      100
+프로도      100      89      75
+조르디     75      80      48
+----------------------------------------------------
+*/
+ 

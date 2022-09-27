@@ -1,0 +1,12 @@
+package abstract_;
+
+import java.util.Date;
+
+public class Today {
+	public static void main(String[] args) {
+		Date date = new Date(); //시스템의 설정된 시간의 값으 가져옴 얘네들도 오버라이딩 - 그래서 주소값이 아닌 시간이...
+		System.out.println("오늘 날짜 : "+date);
+		
+	}
+
+}

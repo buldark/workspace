@@ -1,0 +1,59 @@
+package class_;
+
+public class Sungjuk {
+	
+	private String name;
+	private int kor, eng, math, tot;
+	private double avg;
+	private char grade;
+	
+	public String getName(){
+		return name;
+		}
+	public int getKor() {
+		return kor;
+	}
+	
+	public int getEng() {
+		return eng;
+	}
+	public int getMath() {
+		return kor;
+	}
+	public int getTot() {
+		return tot;
+	}
+	public double getAvg() {
+		return avg;
+	}
+	public char getGrade(){
+		return grade;
+	}
+	
+	
+	
+	
+	public void setData(String n, int k , int e, int m) {
+		String name = n;
+		int kor = k;
+		int eng =e;
+		int math =m;
+		}
+}
+
+//			
+		//double((double)int t/3) = a;
+//		char grade = if(avg>=90) {
+//			System.out.println('A');
+//			
+//		}else if(avg>=80) {
+//			System.out.println('b');
+//		
+//		
+//		}else if(avg>=70) {
+//			System.out.println('c');
+//		}else System.out.println('f');
+//		}
+	
+
+

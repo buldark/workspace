@@ -1,0 +1,45 @@
+package array;
+
+import java.util.Arrays;
+
+public class SelectionSort {
+
+	public static void main(String[] args) {
+		int[] ar = {25,48,35,72,50};
+		int tmp = 0;
+		
+		System.out.println("정렬 전 : ");
+		for(int data : ar) {
+			System.out.print(data + "   ");
+		
+		}
+		System.out.println();
+		
+		//Arrays.sort(ar); 이렇게 java에 있는거 쓰는거 직접 짜애 할 수도.....
+		
+		for(int i = 0 ; i<ar.length; i++) {
+			for(int j=0 ; j<ar.length ;j++) {
+				if(ar[i]>ar[j]) 
+						if(i<j) {
+							
+							tmp=ar[i];
+							ar[i]=ar[j];
+							ar[j]=tmp;
+						} else break; 
+						
+					
+				
+			}
+		}
+		
+		
+		System.out.println("정렬 후 : ");
+		for(int data : ar) {
+			System.out.print(data + "   ");
+		
+		}
+		System.out.println();
+
+	}
+
+}

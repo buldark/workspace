@@ -1,0 +1,64 @@
+package class2;
+import java.util.Scanner;
+public class StringBufferMain {
+	private int dan;
+	Scanner scan = new Scanner(System.in);
+	public void input() {
+	System.out.println("원하는 단을 입력 : ");
+	dan = scan.nextInt();//여기에 지역 변수로 int dan 해버리면 뒤에 여기를 나가버리면 사라짐 
+
+	
+	}
+	public void output() {
+		StringBuffer buffer = new StringBuffer();
+		
+		for(int i =1;i<=9;i++) {
+//			System.out.println(dan+"*"+i+"="+dan*i);
+		buffer.append(dan);//append는 StrngBuffer의 메소드?? + 추가된!!
+		buffer.append("*");
+		buffer.append(i);
+		buffer.append("=");
+		buffer.append(dan*i);
+		
+		
+		
+		System.out.println(buffer.toString()); //StringBuffer를 String으로 변환해서 출력 
+		buffer.delete(0,buffer.length());
+		}
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		StringBufferMain stringBufferMain = new StringBufferMain(); // 클레스 생성 할 시 생성자까지 같이 생각해야함 위의 클래스는 생성자가 하나도 없기에 디폴트 처리.. 
+		stringBufferMain.input();
+		stringBufferMain.output();
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	}
+
+}
+/*
+ 원하는 단을 입력 : 5 input()
+ ----------------------------
+ 5*1=5			 output()
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 5*9 =45
+ */
+ 

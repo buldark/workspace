@@ -1,0 +1,27 @@
+package array;
+
+public class Lotto1 {
+
+	public static void main(String[] args) {
+	
+				int[] lotto=new int[6];
+				int j ,i;
+				//1부터 45중에 난수 발생 but 중복된 숫자는 뺴줘야함
+				for(j=1; j<lotto.length;j++) {
+					lotto[j]=(int)(Math.random()*44)+1;
+					for(i = 0 ; i<=lotto.length; i++) {
+					 lotto[i]=(int)(Math.random()*44)+1;
+						
+				
+					 if(lotto[i+1]!=lotto[j]) {continue;
+					} else ;
+		
+					}System.out.println((i+1)+"번" +lotto[i]); 
+					 
+				}//for	
+			}
+
+		}
+
+	
+

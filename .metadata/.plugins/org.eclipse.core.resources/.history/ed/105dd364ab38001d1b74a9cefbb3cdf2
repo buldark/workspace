@@ -1,0 +1,18 @@
+package array;
+
+public class Array_01 {
+
+	public static void main(String[] args) {
+		
+		// 배열 ar 쓰는 방식 
+		int[]ar = {10,20,30};
+		int[] ar2 ;
+		ar2 = new int[3];
+		int[] ar3 = new int[]{10,20,30};
+		
+		
+		// 에러 : 오른쪽에 int[3] 이렇게 쓰면 안됨ㅇ.....int[] ar = new int[3]{10, 20, 30}; - X
+		// 에러 : 오른쪽에 데이터 값 {10,20,30} 쓰면 안됨...int[] ar; ar = {10, 20, 30}; - 
+
+}
+}

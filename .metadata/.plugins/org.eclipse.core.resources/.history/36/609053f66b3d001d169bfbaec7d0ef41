@@ -1,0 +1,28 @@
+package inhertance;
+class AA{
+	public int a =3;
+	public void disp() {
+		a+=5;
+		System.out.println("AA : "+a+" ");
+	}
+}
+
+//--------------------------------------------
+class BB extends AA {
+	public int a = 8;
+	public void disp() {
+		this.a +=5;
+		System.out.println("bb :  "+ a + "  ");
+	}
+}
+
+
+//------------------------------------------------------------------
+public class TestMain {
+
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

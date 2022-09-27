@@ -1,0 +1,71 @@
+package inhertance;
+
+class Test extends Object/* 이게 항상 붙어 있는거임 자바의 모든 클래스는 Object로 상속받는다!*/{
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return getClass()+ "@개바부";//이럼 주소값이 다 개바부가 되어버림!!! 아래 t=개바부 이런식으로 나옴!!(.hashCode제외 ..) 아래 그냥 t도 toString이 생략된거랑 같은것임!! 
+	}
+		
+}
+//---------------------------------------------------------
+public class ObjectMain {
+
+	public static void main(String[] args) {
+		Test t = new Test();//t는 객체이다.  객체는  16진수로 주소값을 갖는다 
+		System.out.println("객체 t =" + t);//16
+		System.out.println("객체 t =" + t.toString()); //.toString 써도 되고 안써도 되고!!! 이건 주소값 보여주는거 
+		System.out.println("객체 t =" + t.hashCode()); //.hashCode() : 객체를 16진수가 아닌 10진수 값으로!!
+		System.out.println();
+		String str = "apple"; //왜 주소값이 아닌 apple이 뜨는가 이건 오버라이딩이 되어서 
+		System.out.println("객체 str = "+str);
+		System.out.println("객체 str = "+str.toString()); 
+		System.out.println("객체 str = "+str.hashCode());
+		System.out.println();
+		
+		
+		String aa = new String ("apple"); //각자 다른 주소 값 
+		String bb = new String("apple");//각자 다른 주소값 
+		System.out.println("aa==bb : " + (aa==bb)); //false 등호는 주소값을 물어보는 것임 주소는 다름!!! 
+		System.out.println("aa.equals(bb) : " + aa.equals(bb));//문자열(String) 내equals로 물어보면 문자열을 물어보는것 그래서 true
+		System.out.println();
+		
+		Object cc = new Object();
+		Object dd = new Object();
+		System.out.println("cc==dd : " + (cc==dd)); //false 주소값
+		System.out.println("cc.equals(dd) : " + cc.equals(dd)  ); //주소 false  object에 있는 equals는 문자열이  아닌 주소값 비교 
+		
+		
+		Object ee = new String("apple");//String클래스로 만들었고 오버라이드 되었기에 String으로!! (object가 아니라!!)
+		Object ff = new String("apple");
+		System.out.println("ee==ff : " + (ee==ff)); 
+		System.out.println("ee.equals(ff) : " + ee.equals(ff)  ); 
+	}
+
+}
+
+/*
+class Object {
+   public boolean equals(Object )   참조값 비교
+   public int hashCode()         10진수
+   public String toString()      클@16진수
+}
+
+class Test extends Object {
+   public String toString()   개바부
+}
+
+class String extends Object {
+   public boolean equals(Object )   문자열 비교
+   public int hashCode()         문자열을 10진수 변환, 믿지 마삼
+                           표현 할 수 있는 문자열은 무한대이기 때문에 10진수 표현을 다 할 수 없다
+   public String toString()      문자열
+}
+
+ */
+
+
+
+
+
+

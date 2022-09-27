@@ -1,0 +1,32 @@
+package inhertance;
+
+public class Sub extends Super/*상속 걸기*/{
+	
+	protected String name;
+	protected int age;
+	// sub의 필드의 값은 name /age + 부모의 키와 몸무게
+	public Sub() {
+		System.out.println("Sub 기본 생성자");
+	}
+	public Sub(String name,int age , double weight,double height) {
+		this.name = name;
+		this.age =age;
+		super.weight =weight;
+		super.height=height; //super로 쓰면 sub것이 아닌 super것임을 보여줌
+//		this.weight =weight;
+//		this.height=height; 이것도 맞음 
+	}
+	public void output() {
+		System.out.println("이름 = "+name);
+		System.out.println("나이 = "+age);
+		System.out.println("몸무게 ="+ weight);
+		System.out.println("키 = "+ height);
+	}
+	public static void main(String[] args) {
+		Sub aa = new Sub("홍길동",25,70.5,182.3); //sub만 했지만 부모값까지 다 뜸 
+		aa.disp();//sub에는 없음 -> 부모super클래스에 있음 거기서 찾아서 씀!!
+		System.out.println();
+		aa.output();
+	}
+
+}

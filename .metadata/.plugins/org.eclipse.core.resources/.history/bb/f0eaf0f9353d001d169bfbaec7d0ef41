@@ -1,0 +1,45 @@
+package class_;
+
+import java.util.Scanner;
+
+//모든일은 여기에서 잡음
+public class MemberService {
+	private MemberDTO[] ar = new MemberDTO[5];//5명까지니깐 
+	//private int number;
+	//필드는 이제 끝 -> 이제 메소드만 설정 menu() insert() list() update() delete()
+	
+//	ar[0] =new MemberDTO();
+//	
+//	ar[0]= null; -> 이 자체가 delete 
+//5번 메뉴선택하면 나가고 종료 '
+	
+	public MemberService() {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("**************************");
+		System.out.println("메뉴");
+		System.out.println("1.가입");
+		System.out.println("2.출력");
+		System.out.println("3.수정");
+		System.out.println("4.탈퇴");
+		System.out.println("5.종료");
+		System.out.println("**************************");
+		System.out.println("번호 : ");
+		int number = scan.nextInt();
+		if(number==1) {
+			
+		
+		
+		}else if(number==2) {
+			
+		}else if(number==3) {
+			
+		}else if(number==4) {
+			
+		}else ;
+		               
+		
+	}
+	 
+	
+
+}

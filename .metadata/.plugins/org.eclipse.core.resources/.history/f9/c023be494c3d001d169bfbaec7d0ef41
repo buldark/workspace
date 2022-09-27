@@ -1,0 +1,11 @@
+package inhertance;
+
+public class Sub extends Super/*상속 걸기*/{
+	public Sub() {
+		System.out.println("sub 기본 생성자");
+	}
+	public static void main(String[] args) {
+		Sub aa = new Sub();
+	}
+
+}

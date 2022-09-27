@@ -1,0 +1,48 @@
+package class_;
+
+public class Sungjuk {
+	
+	private String name;
+	private int kor, eng, math, tot;
+	private double avg;
+	private char grade;
+	
+	public String getName(){
+		return name;
+		}
+	public int getKor() {
+		return kor;
+	}
+	
+	public int getEng() {
+		return eng;
+	}
+	public int getMath() {
+		return kor;
+	}
+	public int getTot() {
+		return tot;
+	}
+	public double getAvg() {
+		return avg;
+	}
+	public char getGrade(){
+		return grade;
+	}
+	
+	
+	
+	
+	public void setData(String n, int k , int e, int m) {
+		String name = n;
+		int kor = k;
+		int eng =e;
+		int math =m;
+		}
+
+	/*	public void calc(int tot , double avg , char grade) {
+		int tot = int k+int e +int 
+	}	*/
+
+
+}

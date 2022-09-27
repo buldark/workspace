@@ -1,0 +1,26 @@
+package constructor;
+import java.util.Scanner;
+public class Exam {
+	
+	private String name;
+	private String dap;
+	private char[] ox;
+	private int score;
+	private final String JUNG="11111";
+	public Exam() {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("이름 입력: ");
+		String name = scan.next();
+		System.out.println("답 입력: ");
+		String dap = scan.next();
+		
+	}
+	public int Compare() {
+		
+		for(int i=0;i<JUNG.length();i++) {
+			int JUNG.charAt(i)-48 =int dap.charAt(i);
+			//charat()-48
+		}
+	}
+	
+}

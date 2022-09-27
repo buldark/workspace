@@ -1,0 +1,21 @@
+package inhertance;
+
+public class Sub extends Super/*상속 걸기*/{
+	
+	protected String name;
+	protected int age;
+	// sub의 필드의 값은 name /age + 부모의 키와 몸무게
+	public Sub() {
+		System.out.println("Sub 기본 생성자");
+	}
+	public Sub(String name,int age , double weight,double height) {
+		this.name = name;
+		this.age =age;
+		this.weight =weight;
+		this.height=height; 
+	}
+	public static void main(String[] args) {
+		Sub aa = new Sub(); //sub만 했지만 부모값까지 다 뜸 
+	}
+
+}

@@ -1,0 +1,39 @@
+package array;
+
+public class Array_01 {
+
+	public static void main(String[] args) {
+		
+		int[] ar  ;// 배열을 선언 / 정수형 변수
+		ar = new int[5];//생성 []에 들어가는 숫자가 방의개수  총 5개의 방이 들어옴 ar[0] ar[1] ar[3] ar[4] ar[5]
+		
+		ar[0] =25;
+		ar[1] =78;
+		ar[2] =30;
+		ar[3] =43;
+		ar[4] =52;
+		// 배열과 for는 실과 바늘임
+		
+		for(int i= 0 ; i<=4 ; i ++) {
+			System.out.println("ar["+i+"] = "+ar[i]);
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		/* 배열 ar 쓰는 방식 
+		int[]ar = {10,20,30};
+		int[] ar2 ;
+		ar2 = new int[3];
+		int[] ar3 = new int[]{10,20,30};
+		
+		
+		// 에러 : 오른쪽에 int[3] 이렇게 쓰면 안됨ㅇ.....int[] ar = new int[3]{10, 20, 30}; - X
+		 에러 : 오른쪽에 데이터 값 {10,20,30} 쓰면 안됨...int[] ar; ar = {10, 20, 30}; - */
+
+}
+}

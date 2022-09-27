@@ -1,0 +1,38 @@
+package class_;
+
+
+class Person{
+	String name;
+	int age ; //메뉴판을 작성한것과같은 상황
+	
+	
+	
+}//c-person
+
+
+
+
+
+
+//---------------------------------------------
+public class PersonMain {
+//객체지향언어 쓰는 이유 1)중복 되는것을 피하기 위해서 cf) DB - aap 관점 지향
+				// 2)결합성을 낮추기 위해서 
+
+
+	public static void main(String[] args) {
+	
+//		int aa -> 실수형 변수
+//		double aa ->실수형 변수
+//		Person aa  -> 객체(클래스변수)
+		Person aa;//객체
+		aa =new Person();//메모리생성 
+		System.out.println("객체 aa = "+aa); // syso(aa)는 데이터의 주소값을 출력 
+		//name = "홍길동"; ->error//누구 안에 있는 이름을 말해줘야함 
+		aa.name= "홍길동";
+		aa.age=25;
+		
+		System.out.println("이름은 "+aa.name+"\t+ 나이는" +aa.age);
+	}
+
+}

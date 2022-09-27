@@ -1,0 +1,35 @@
+package array;
+import java.util.Scanner;
+public class Array_03 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int size = scan.nextInt(); //3
+		
+		int[] ar = new int[sixe];
+		System.out.println("배열 크기 입력 : " );
+		ar= new int[scan.nextInt()];
+		for(int i = 0 ; ; i++) {
+			
+			ar[i]=size;
+			System.out.print("ar["+i+"] 입렵 : "+ size);
+			System.out.println();
+			
+			
+		}
+		}
+	}
+
+
+/*
+ar[0] 입력 : 25
+
+
+
+
+화면 25 -50 78
+
+이경우 입력for문 따로
+출력 for 문 따로 
+
+*/

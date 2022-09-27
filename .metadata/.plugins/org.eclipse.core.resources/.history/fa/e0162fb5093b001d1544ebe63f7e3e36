@@ -1,0 +1,14 @@
+package class_;
+//모든일은 여기에서 잡음
+public class MemberService {
+	private MemberDTO[] ar = new MemberDTO[5];//5명까지니깐 
+	//필드는 이제 끝 -> 이제 메소드만 설정 menu() insert() list() update() delete()
+	
+	ar[0] =new MemberDTO();
+	
+	ar[0]= null; -> delete 
+//5번 메뉴선택하면 나가고 종료 '
+	
+	
+
+}

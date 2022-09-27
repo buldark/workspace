@@ -1,0 +1,40 @@
+package inhertance;
+class AA{
+	public int a =3;
+	public void disp() {
+		a+=5;
+		System.out.println("AA : "+a+" ");
+	}
+}
+
+//--------------------------------------------
+class BB extends AA {
+	public int a = 8; // class A의 Int a 와 오버라이드 아님 //오버라이드이든 오버로드이든 모두 메소드만 가능 // int a = ;이거는 메소드가 아님  
+	public void disp() {
+		this.a +=5;
+		System.out.println("bb :  "+ a + "  ");
+	}
+}
+
+
+//------------------------------------------------------------------
+public class TestMain {
+
+	public static void main(String[] args) {
+		
+		BB aa = new BB();
+		aa.disp();// 답 : BB : 13
+		System.out.println("aa : "+aa.a);//aa : 13
+		
+		AA bb = new BB();// 부모 =자식
+		bb.disp();//BB:13 오버라이드라서 모든 우선권은 자식에게 감....부모로 걸었지만 그래도 자식에게 감???오버라이드가 되면 부모가 나와도 무조건 자식을!!!
+		System.out.println("bb : "+bb.a);// a는 오버라이드 개념이 없음 그래서 답이 삼....a는 메소드가 아님.... 그래서 클래스 AA의 a값을 가짐  bb :  3
+		
+		BB dd =(BB)bb; //자식 = (자식)부모 //BB를 캐스팅 했다
+		dd.disp();
+		System.out.println("dd : "+dd.a); //dd : 18 
+		System.out.println();
+		
+	}
+
+}

@@ -1,0 +1,39 @@
+package class_;//일인분씩 잡는다....
+import java.util.Scanner;
+public class MemberDTO {
+	private int age;
+	private String name ,phone , address ;
+	
+	
+	public MemberDTO() {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("이름 입력 :");
+		String name = scan.next();
+		this.name = name;
+		System.out.println("나이 입력 :");
+		int age = scan.nextInt();
+		this.age=age;
+		System.out.println("핸드폰 입력 :");
+		String phone = scan.next();
+		this.phone =phone;
+		System.out.println("주소 입력 :");
+		String address = scan.next();
+		this.address = address;
+	}
+
+	public String getName() {
+		return name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public String getAddress() {
+		return address;
+	}
+	
+
+}
+

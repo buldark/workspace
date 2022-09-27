@@ -1,0 +1,19 @@
+package inhertance;
+
+class Test/*extends Object 이게 항상 붙어 있는거임 자바의 모든 클래스는 Object로 상속받는다!*/{
+		
+}
+//---------------------------------------------------------
+public class ObjectMain {
+
+	public static void main(String[] args) {
+		Test t = new Test();//t는 객체이다.  객체는  16진수로 주소값을 갖는다 
+		System.out.println("객체 t =" + t);
+		System.out.println("객체 t =" + t.toString()); //.toString 써도 되고 안써도 되고!!! 
+		System.out.println("객체 t =" + t.hashCode()); //.hashCode() : 객체를 16진수가 아닌 10진수 값으로!!
+		System.out.println();
+		
+
+	}
+
+}

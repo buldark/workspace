@@ -1,0 +1,25 @@
+package constructor;
+
+public class VarArgs {
+		public  VarArgs() {
+			System.out.println("기본생성자");
+		}
+	
+	public static void main(String[] args) {
+		VarArgs va = new VarArgs();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

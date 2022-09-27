@@ -1,0 +1,24 @@
+package class_;
+
+class This{
+	private int a ; //이럼 This 클래스 밖에서 접근 불가능 예 class Thismain에서 new 못시킴 에러뜸 ->setter(입력:set.~~) getter(출력:get.!!) 메소들 만들어함
+	
+	public void setA/*a에 집어 넣을 거니깐*/(int a ) {
+		a=a;
+		
+	}
+	
+	public int getA() {
+		return a;
+	}
+}
+///////==========================================
+public class ThisMain {
+
+	public static void main(String[] args) {
+		This t = new This();
+		t.setA(10);
+		System.out.println(t.getA());
+	}
+
+}

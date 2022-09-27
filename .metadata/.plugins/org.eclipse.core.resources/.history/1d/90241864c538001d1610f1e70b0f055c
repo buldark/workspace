@@ -1,0 +1,97 @@
+package array;
+import java.util.Scanner;
+public class Array_04 {
+
+	public static void main(String[] args) {
+	
+	boolean[] lot = new boolean[5];
+	Scanner scan = new Scanner(System.in);
+	System.out.println("1. 입차  ");
+	System.out.println("2. 출차  ");
+	System.out.println("3.리스트  ");
+	System.out.println("4.종료 ");
+	System.out.println("메뉴 :  ");
+	boolean b;
+	while(true) {
+		int user = scan.nextInt();
+		for(int i = 0 ; i<=4 ; i++) {
+			if(user==1) {System.out.println("위치입력 : " );
+			int userlot = scan.nextInt();
+				if(userlot>0) {
+					b=true;
+					System.out.println(b);
+				}
+			break;
+			
+			}else if(user==2) {System.out.println("위치입력 : " );break;
+			
+			}else if(user==3) {System.out.println(lot);break;
+			
+			}else System.out.println("종료");break;
+		}break ;
+	}
+	
+	
+}
+}
+
+
+/*
+ [강사] [오후 4:43] /*
+주차장 관리 프로그램 while 과 if 문 만 들어감 
+**************
+   1. 입차      input()
+   2. 출차      output()
+   3. 리스트      list()
+   4. 종료
+**************
+  메뉴 : 
+
+1번인 경우
+위치 입력 : 3
+3위치에 입차 / 이미 주차되어있습니다
+
+2번인 경우
+위치 입력 : 4
+4위치에 출차 / 주차되어 있지않습니다
+
+3번인 경우
+1위치 : true
+2위치 : false
+3위치 : true
+4위치 : false
+5위치 : false
+
+	System.out.println();
+		System.out.println();
+		System.out.println();
+		System.out.println();
+		int i=0;
+		int [] ar ;
+		ar = new int[5];
+		//System.out.println(ar[1]);
+		Scanner scan = new Scanner(System.in);
+		
+		
+		while(true) {
+			for(i=0; i<=4;i++) {
+			
+				System.out.println(i+1+"인경우");
+				System.out.print("위치입력 : ");
+				int lo = scan.nextInt();
+				//System.out.println(ar[i]);
+					if(ar[i]==lo) {System.out.println(i+"입차되었다");
+			
+					}else {System.out.println("출차되었다");}
+				
+			
+				
+				}
+			
+						
+			
+			
+			break;}
+*/
+
+ 

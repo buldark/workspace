@@ -1,0 +1,24 @@
+package inhertance;
+
+class Test/*extends Object 이게 항상 붙어 있는거임 자바의 모든 클래스는 Object로 상속받는다!*/{
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return getClass()+ "@개바부";//이럼 주소값이 다 개바부가 되어버림!!! 아래 t=개바부 이런식으로 나옴!!(.hashCode제외 ..) 아래 그냥 t도 toString이 생략된거랑 같은것임!! 
+	}
+		
+}
+//---------------------------------------------------------
+public class ObjectMain {
+
+	public static void main(String[] args) {
+		Test t = new Test();//t는 객체이다.  객체는  16진수로 주소값을 갖는다 
+		System.out.println("객체 t =" + t);//16
+		System.out.println("객체 t =" + t.toString()); //.toString 써도 되고 안써도 되고!!! 이건 주소값 보여주는거
+		System.out.println("객체 t =" + t.hashCode()); //.hashCode() : 객체를 16진수가 아닌 10진수 값으로!!
+		System.out.println();
+		
+
+	}
+
+}

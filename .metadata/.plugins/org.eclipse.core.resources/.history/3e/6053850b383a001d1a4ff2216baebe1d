@@ -1,0 +1,17 @@
+package method;
+
+public class Method_02 {
+
+	public void disp() {//구현 ->반드시 호출 필요!!
+		System.out.println("non static method");	
+		}
+
+	public static void output() {//구현
+		System.out.println("stativ mathod");
+		
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+}

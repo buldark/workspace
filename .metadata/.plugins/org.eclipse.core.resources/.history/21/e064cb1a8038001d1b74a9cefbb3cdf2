@@ -1,0 +1,20 @@
+package while_;
+
+public class DoWhile {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//A B C D E-Z
+		//1줄에 7개씩 출력하시오
+		char ch = 'A';
+		do {
+			
+			System.out.println(ch++);
+			
+		}while(ch == 'Z');
+		
+		
+
+	}
+
+}

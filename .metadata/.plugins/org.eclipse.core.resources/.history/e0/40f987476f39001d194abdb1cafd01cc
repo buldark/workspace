@@ -1,0 +1,20 @@
+package array; // 6개의 숫자가 1부터 45까지 중에 발생 방은 6개 필요 + 중복이 안되게 배열을 잡아
+
+public class Lotto {
+
+	public static void main(String[] args) {
+		int[] lotto=new int[6];
+		//1부터 45중에 난수 발생 but 중복된 숫자는 뺴줘야함
+		
+		for(int i = 0 ; i<lotto.length; i++) {
+			lotto[i]=(int)(Math.random()*45)+1;}
+		
+		
+		for(int data :  lotto) {
+			
+			System.out.print(data + " ");
+		}
+		}	
+	
+
+	}

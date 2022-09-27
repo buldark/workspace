@@ -1,0 +1,25 @@
+package class_;
+
+import java.util.Scanner;
+
+//모든일은 여기에서 잡음
+public class MemberService {
+	
+	private MemberDTO[] ar = new MemberDTO[5];//5명까지니깐 //단순 dto 방 다섯개를 가지고 있을 뿐 -> 배열만 생성 !! 클래스 생성은 아님!! 
+	
+	public void menu() { //이 함수 메뉴는 스스로 발생 X main 에서 new 하고 생성자+ 
+		Scanner scan =new Scanner(System.in);
+		int num=0;
+		while(true) {
+			System.out.println("***********************");
+			System.out.println("1번 메뉴");
+			System.out.println("2번 메뉴");
+			System.out.println("3번 메뉴");
+			System.out.println("4번 메뉴");
+			System.out.println("메뉴 :  ");
+			num = scan.nextInt();
+			if(num==5) break;//while을 벗어나라 
+			}//while
+		}//menu
+	}
+	

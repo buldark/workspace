@@ -1,0 +1,44 @@
+package method;
+
+public class Method_01 {
+
+	public static void main(String[] args) {
+		int a= 25, b=36; // 지역변수 ,local variable -> 이 경우 main 안에!!
+		
+		
+		Method_01 m =new Method_01();//new 생성
+		int sum = m.add(25, 36); //호출
+		int sub = m.sub2(25,36);
+		int mul = m.mul2(25,36);
+		double div = m.div2(25,36);
+		System.out.println(div);
+
+		/*
+		 * int sum = a +b 메소드로 함수로 구하려면??
+		 * int sub = a-b
+		 * 
+		 * 
+		 * 
+		 * 
+		 */
+		
+		
+		System.out.println(a+"+"+b +"="+sum);
+
+	}
+	//함수 안에 함수가 들어가면 안됨  그러니깐 새로운 메소드를 void main 안에 넣을 수 없음
+	
+		public int/*리턴값이 정수라서 리턴값 형태인 int 써준거??*/ add(int a/*이 a는 add거 위의 a는 main 거  local variable*/,int b){//구현 , 인수(argument) ,매개변수(parameter)  인수는 따로따로 선언 int a,b (x) int a int b 따로따로
+			return a +b;
+			/*static이 없기에 new 해야함 */}
+		public int sub2(int a , int b) {
+			return a-b;
+			}
+		public int mul2(int a , int b ) {
+			return a*b;
+		}
+		public double div2(int a , int b) {
+			return a/b;
+		}
+}
+

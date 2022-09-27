@@ -1,0 +1,78 @@
+package class_;
+
+public class Sungjuk {
+	
+	private String name;
+	private int kor, eng, math, tot;
+	private double avg;
+	private char grade;
+	//여기 까지가 하나의 묶음  총 7개가 한 묶음 
+	//그런데 데이터 접근이 private되어 있기엥 aa.name ="ㅁㄴ" aa.kor aa.avg 이렇게 데이터를 넣을 수 가 없다 +아예 데이터를 입력 출력도 안됨> 그래서 아래에 setData를 만들어서 넣어주기...
+	//setData는 일종의 중개자이다 aa.setData에서 자료를 받고 그 받은 데이터드들 aa.kor aa.avg~~~넣어주기!! ->
+	public String getName(){
+		return name;
+		}
+	public int getKor() {
+		return kor;
+	}
+	
+	public int getEng() {
+		return eng;
+	}
+	public int getMath() {
+		return math;
+	}
+	public int getTot() {
+		return tot;
+	}
+	
+	/*
+	 만약 소수점 이하 자리 표시하기 위해서는 
+	 	public double getAvg() {
+			return String.format("%.2f",avg); 
+			} -> 근데 이럼 오류 뜸 안에 return String ~~해서 리턴값이 String이 되어버림 결국 받는 받는 값이 double이 아닌 String 
+	
+	답 ->	public String getAvg() {
+			return String.format("%.2f",avg); 
+			}  	 
+	*/
+	
+	public double getAvg() {
+		return avg;
+	}
+	public char getGrade(){
+		return grade;
+	}
+	
+	public void setData(String n, int k , int e, int m) {
+		 name = n;
+		 kor = k;
+		 eng =e;
+		 math =m;
+		}
+	public void calc() { //직접적으로 데이터를 넣는 것이 아니기에 ()빈칸 & void 앞에 setData에 데이터가 들어가면 그 데이터를 활용하면 나오는거기에!!오오오오오오오 대신 모든거 다 
+		tot = kor+math+eng;
+		avg = (double)tot/3;//또는 avg= tot/3.0  / tot 또는 3 둘중 하나는 실수형이 되어야 실수형이 되니깐 
+		if(avg>=90) {// if 먼저 쓰기- > if(만약 평균이 90이상이면){성적이 a다 } 
+			grade = 'A';
+		}else if(avg>=80) {grade = 'b';}else if(avg>=70) {grade = 'c';}else if(avg>=70) {grade = 'd';}else grade='f';
+	}
+
+}
+
+//			
+		//double((double)int t/3) = a;
+//		char grade = if(avg>=90) {
+//			System.out.println('A');
+//			
+//		}else if(avg>=80) {
+//			System.out.println('b');
+//		
+//		
+//		}else if(avg>=70) {
+//			System.out.println('c');
+//		}else System.out.println('f');
+//		}
+	
+
+

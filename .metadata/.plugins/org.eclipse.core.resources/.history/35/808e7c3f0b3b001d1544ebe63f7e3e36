@@ -1,0 +1,46 @@
+package constructor;
+class Hello{
+		private String name ;
+		private int age;
+		
+		public Hello() { /*생성자에는 void쓰면 안됨 void 쓰면 생성자가 아닌 일반 함수가 되어버림...*/
+			System.out.println("기본 생성자 ");
+		}
+		public Hello(String name) {
+			this.name = name ; //필드값과 인수 구분을 위해
+		}
+		public Hello(int age) {
+			this.age = age;
+		}
+		public String getName() {
+			return name;
+		}
+		public int getAge() {
+			return age;
+		}
+	
+	
+	
+}
+
+//=======================================================================
+public class ConstructorMain {
+
+	public static void main(String[] args) {
+		Hello aa = new Hello(); 
+		System.out.println(aa.getName());
+		System.out.println();
+		
+		Hello bb = new Hello("홍길동");
+		
+		System.out.println(bb.getName()+"\t"+aa.getAge());
+		System.out.println();
+		
+		Hello cc = new Hello(25);
+		
+		System.out.println(cc.getName()+"\t"+cc.getAge());
+		System.out.println();
+	
+	}
+
+}

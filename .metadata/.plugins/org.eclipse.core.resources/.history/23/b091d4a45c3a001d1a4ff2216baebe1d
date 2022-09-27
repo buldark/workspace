@@ -1,0 +1,16 @@
+package multi;
+import java.util.Scanner;
+public class MultiArray_06 {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("인원수를 입력 : ");
+		int pnumber = scan.nextInt();
+		for(int i=0 ;i==pnumber;i++) {
+			System.out.println("이름 입력");
+			String name = scan.next();
+			//for()
+		}
+		
+		
+	}
+}

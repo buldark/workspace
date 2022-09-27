@@ -1,0 +1,27 @@
+package while_;
+import java.util.Random;
+import java.util.Scanner;
+public class Game {
+
+	public static void main(String[] args) {
+		Random r= new Random();
+		Scanner scan = new Scanner(System.in);
+		
+		int com = 	r.nextInt(100)+1;
+		int count = 0 ;
+		int user = scan.nextInt();
+		while(com!=user) {
+			
+			
+			if(com>user) {System.out.println(user +" 보다 큰 수 입니다.");
+			count++;}
+			else if(com < user) {System.out.println(user +" 보다 작은 수  입니다.");
+			count++;}
+			else {System.out.println("딩동댕");}			}
+			
+		}
+		
+		
+				}
+
+}
